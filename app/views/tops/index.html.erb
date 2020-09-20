@@ -1,0 +1,118 @@
+<script>
+  $(function(){
+    $('a[href^=#]').click(function() {
+      var speed = 400;
+      var href= $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top;
+      $('body,html').animate({scrollTop:position}, speed, 'linear');
+      return false;
+    });
+  });
+</script>
+
+<div class="photo__image">
+	<%= image_tag "blue.jpg", class: "photo__image__el" %>
+	<div class="photo__image__ms">Keisuke Kanda's Portfolio</div>
+</div>
+
+<div class="contents">
+	<ul class="list" >
+		<li class="list__el"><a href="#sec1">Profile</a></li>
+		<li class="list__el"><a href="#sec2">Skill</a></li>
+		<li class="list__el"><a href="#sec3">Works</a></li>
+		<li class="list__el"><a href="#sec4">Contact</a></li>
+	</ul>
+
+	<div id="sec1">
+		<div class="sec_el">Profile</div>
+		<div class="profile">
+			<div class="profile__image">
+				<%= image_tag "profile2.jpeg", class: "profile__image__el" %>
+			</div>
+			<div class="profile__content">
+				<p>
+					　初めまして。
+					未経験からのエンジニア転職を目指している神田圭佑と申します。
+					新卒で福岡県警に入職するも辞職。
+					その後、福祉事業団体で３年間勤めるが、業務でITの力を目の当たりにし、転職を決意。
+					現在は、テックキャンプエンジニア転職のカリキュラムを修了し、就活中。
+					<br>
+					　前職では、全体を俯瞰して適切に課題の解決にあたること、仕事をミスなく正確にこなすことの2点が身につきました。
+					<br>
+					　特技は少林寺拳法です。
+					大学で部活動に所属しており、3回生で主将、4回生で九州学生少林寺拳法連盟の委員長をつとめました。
+					この経験で、人が協力しあえる組織を作るために相手の立場になって考える重要性に深く気づかされました。
+					<br>
+					　よろしくお願いします。
+				</p>
+			</div>
+		</div>
+		<div class="button">
+			<a class="button__el" href="#index">▲</a>
+		</div>
+	</div>
+
+	<div id="sec2">
+		<div class="sec_el">Skill</div>
+		<div class="skill">
+			<p>
+				【テックキャンプでの学習経験】
+				<br>
+				HTML・CSS・Ruby・Ruby on Rails・JavaScript・jQuery・SQL・Git・GitHub・Haml・SCSS・AWS　等の技術を用いたアプリケーション開発 
+				<br>
+				<br>
+				【現在】
+				<br>
+				個人アプリ開発で学習を進めたAWS,Docker,CircleCIについて、さらに技術を深めています。
+				<br>
+				具体的には、CircleCIによるCI/CDパイプラインの構築について、学習を進めています。
+			</p>
+		</div>
+		<div class="button">
+			<a class="button__el" href="#index">▲</a>
+		</div>
+	</div>
+
+	<div id="sec3">
+		<div class="sec_el">Works</div>
+		<div class="works">
+			<div class="works__el">
+				<%= image_tag "growool.png", class: "works__el__c" %>
+				<a href="http://54.248.135.239/">Groool</a>
+				<p>自己研鑽のための情報共有アプリ</p>
+				<a href="https://github.com/keisuke-kk/growool2">git hub</a>
+			</div>
+			<div class="works__el">
+				<%= image_tag "furima.png", class: "works__el__c" %>
+				<a href="http://52.192.17.240/">FURIMA</a>
+				<p>フリマアプリのコピーサイト</p>
+				<a href="https://github.com/keisuke-kk/freemarket_sample_74a">git hub</a>
+			</div>
+			<div class="works__el">
+				<%= image_tag "startcook.png", class: "works__el__c" %>
+				<a href="https://startcook.herokuapp.com">StartCook</a>
+				<p>献立アプリ</p>
+				<a href="https://github.com/keisuke-kk/st_cook">git hub</a>
+			</div>
+		</div>
+		<div class="button">
+			<a class="button__el" href="#index">▲</a>
+		</div>
+	</div>
+
+	<div id="sec4">
+		<div class="sec_el">Contact</div>
+			<%= link_to "https://twitter.com/75dFCUmohNzeRfR" do %>
+				<div class="contact">
+					<div class="contact__image">
+						<%= image_tag "twitter.jpg", class: "contact__image__el" %>
+						<p>twitter</p>
+					</div>
+				</div>
+			<% end %>
+		<div class="button">
+			<a class="button__el" href="#index">▲</a>
+		</div>
+	</div>
+</div>
