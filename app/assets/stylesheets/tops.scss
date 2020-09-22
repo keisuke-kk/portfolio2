@@ -59,20 +59,15 @@ a {
   }
 
   .profile {
-    display: flex;
 
     &__image {
-      flex: 0 0 50%;
+      text-align: center;
 
       &__el {
         border-radius: 50%;
-        width: 70%;
+        width: 40%;
         padding: 20px;
       }
-    }
-
-    &__content {
-      flex: 0 0 50%;
     }
   }
 
